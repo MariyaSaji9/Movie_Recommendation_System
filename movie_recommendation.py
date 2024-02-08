@@ -58,7 +58,7 @@ net_mov.isnull().sum()
 
 net_mov
 
-for interpreting the dataset easily some cleaning and preprocessing steps are performing
+#for interpreting the dataset easily some cleaning and preprocessing steps are performing
 
 net_mov = net_mov.rename(columns={"listed_in":"Genre"})
 net_mov['Genre'] = net_mov['Genre'].apply(lambda x: x.split(",")[0])
@@ -112,8 +112,8 @@ plt.ylabel('Count')
 plt.xticks(rotation=45)
 plt.show()
 
-2019, 2020, 2018, 2021 are the years netflix added large amount of movies.
-2020,2021, 2019, 2017 are the years netflix added large amount of tv show
+#2019, 2020, 2018, 2021 are the years netflix added large amount of movies.
+#2020,2021, 2019, 2017 are the years netflix added large amount of tv show
 
 # Movie and TV Show Duration Analysis
 plt.figure(figsize=(16, 10))
@@ -159,9 +159,9 @@ plt.ylabel('Movie duration in minutes');
 plt.xlabel('Year of released');
 plt.title("Movie Duration over years", fontsize=20, color='red');
 
-from 1960 to 1965 the Movie durations were 200 minutes.
-after 1965 the durations became shorter.
-from 1980 movie durations is between 100-150 minutes.
+#from 1960 to 1965 the Movie durations were 200 minutes.
+#after 1965 the durations became shorter.
+#from 1980 movie durations is between 100-150 minutes.
 
 # Countplot for Number of Seasons in TV Shows
 plt.figure(figsize=(14, 8))
@@ -266,11 +266,6 @@ plt.xlabel('Content counts', fontsize=10)
 #Vatsal Dubey, Julie Tejwani, Rupa Bhimani, Jigna Bhardwaj, Rajesh Kava, Mousam, Swapril has highest number of movies and Tv shows.
 
 #content based on months
-'''df_copy = df.copy()
-net_date = df_copy[['date_added']]
-net_date['year'] = net_date['date_added'].apply(lambda x : x.split(', ')[-1])
-net_date['month'] = net_date['date_added'].apply(lambda x : x.lstrip().split(' ')[0])'''
-
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][::-1]
 df_copy = net_mov.groupby('year_added')['month_added'].value_counts().unstack().fillna(0)[month_order].T
 
