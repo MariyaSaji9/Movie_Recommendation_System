@@ -15,8 +15,8 @@ This project implements a movie recommendation system using content-based filter
 2. Explore various plots and visualizations to understand movie trends and patterns.
 3. Use the recommendation functions to get personalized movie recommendations based on input titles.
 
-##streamlit app
-developed a streamlit app for getting the recommendations
+## streamlit app
+- developed a streamlit app for getting the recommendations
 
 ## Data
 The movie dataset used in this project contains information about movie titles, descriptions, genres, cast, directors, release years, and other attributes. The data is preprocessed and cleaned to ensure accurate analysis and recommendations.
